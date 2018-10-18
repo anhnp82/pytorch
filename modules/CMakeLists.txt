@@ -1,9 +1,6 @@
 # ---[ Add modules
-# TODO(orionr): Enable Detectron ops for Windows DLL when we
-# can figure out how to get it to build
-if (NOT (MSVC AND BUILD_SHARED_LIBS))
-  add_subdirectory(detectron)
-endif()
+# Workaround for dll problem in windows(phan-anh): move detectron into caffe2/operators
+#add_subdirectory(detectron)
 add_subdirectory(module_test)
 add_subdirectory(observers)
 add_subdirectory(rocksdb)
